@@ -60,13 +60,11 @@ class BertEncoder(nn.Module):
             gnn_emb_batch = torch.empty(0, 768)
             gnn_text_node_idx = []
             word_gnn_idx = []
-            #not_word_gnn_idx = []
             for index, concept_ent_pair in enumerate(concept_ent_pairs):
                 if len(concept_ent_pair) > 0:
                     word_gnn_idx.append(index)
                     edge_idx[index] = edge_idx[index] + gnn_emb_batch.size(0)
                     gnn_emb_batch = torch.cat((gnn_emb_batch, hidden[index, 0, :].unsqueeze(0)), dim=0)
-                    # gnn_emb_batch = torch.cat((gnn_emb_batch, text_node_batch[index].unsqueeze(0)), dim=0)
                     gnn_text_node_idx.append(gnn_emb_batch.size(0) - 1)
                     for concept_ent in concept_ent_pair:
                         start_seq = concept_ent[0]

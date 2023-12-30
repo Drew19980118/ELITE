@@ -45,10 +45,12 @@ class RelevanceScoreBertClassifier(nn.Module):
 
 
 class BertClassifier(nn.Module):
-    def __init__(self, args, model):
+    def __init__(self, args, model, mask_model):
         super(BertClassifier, self).__init__()
         self.embedding = model.embedding
+        self.mask_embedding = mask_model.embedding
         self.encoder = model.encoder
+        self.mask_encoder = mask_model.encoder
         self.labels_num = args.labels_num
         self.pooling = args.pooling
         self.word_rel_ent_mlm_loss = WordMlmTarget(args, len(args.vocab))
@@ -69,9 +71,9 @@ class BertClassifier(nn.Module):
             mask: [batch_size x seq_length]
         """
         # src/mask_src Embedding.
-        emb = self.embedding(id, src, mask, type, concept_ent_pairs, edge_idx, pos, True)
+        emb = self.embedding(src, mask, type, pos)
         if mask_src != None:
-            mask_emb = self.embedding(id, mask_src, mask, type, concept_ent_pairs, edge_idx, pos, False)
+            mask_emb = self.mask_embedding(mask_src, mask, type, pos)
             #mask_rel_emb = self.embedding(mask_rel, mask, type, pos)
             #mask_ent_emb = self.embedding(mask_ent, mask, type, pos)
 
@@ -80,7 +82,7 @@ class BertClassifier(nn.Module):
             vm = None
         output = self.encoder(id, concept_ent_pairs, edge_idx, emb, mask, True, vm)
         if mask_src != None:
-            mask_output = self.encoder(id, concept_ent_pairs, edge_idx, mask_emb, mask, False, vm)
+            mask_output = self.mask_encoder(id, concept_ent_pairs, edge_idx, mask_emb, mask, False, vm)
             #mask_rel_output = self.encoder(mask_rel_emb, mask, vm)
             #mask_ent_output = self.encoder(mask_ent_emb, mask, vm)
             # Target.
@@ -308,7 +310,7 @@ def main():
     # Build bert model.
     # A pseudo target is added.
     args.target = "bert"
-    model, relevance_model = build_model(args)
+    model, mask_model, relevance_model = build_model(args)
 
     # Load or initialize parameters.
     if args.pretrained_model_path is not None:
@@ -322,7 +324,7 @@ def main():
                 p.data.normal_(0, 0.02)
     
     # Build classification model.
-    model = BertClassifier(args, model)
+    model = BertClassifier(args, model, mask_model)
 
     relevance_model = RelevanceScoreBertClassifier(args, relevance_model)
 

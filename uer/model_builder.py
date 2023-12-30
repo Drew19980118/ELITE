@@ -39,11 +39,14 @@ def build_model(args):
         subencoder = None
 
     embedding = BertEmbedding(args, len(args.vocab))
+    mask_embedding = BertEmbedding(args, len(args.vocab))
     relevance_embedding = RelevanceScoreEmbedding(args, len(args.vocab))
     encoder = globals()[args.encoder.capitalize() + "Encoder"](args)
+    mask_encoder = globals()[args.encoder.capitalize() + "Encoder"](args)
     relevance_encoder = globals()[args.relevance_encoder.capitalize() + "Encoder"](args)
     target = globals()[args.target.capitalize() + "Target"](args, len(args.vocab))
     model = Model(args, embedding, encoder, target, subencoder)
+    mask_model = Model(args, mask_embedding, mask_encoder, target, subencoder)
     relevance_model = RelevanceScoreModel(args, relevance_embedding, relevance_encoder)
 
-    return model, relevance_model
+    return model, mask_model, relevance_model
