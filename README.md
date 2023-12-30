@@ -51,6 +51,8 @@ BMOC-KEPLM
 │   ├── text_ent_encoder.bin
 │   └── google_vocab.txt
 ├── outputs
+├── pretrain_emb
+│   ├── load_sentence_emb.h5
 ├── uer
 ├── README.md
 ├── requirements.txt
