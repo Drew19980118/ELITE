@@ -19,9 +19,9 @@ argparse == 1.1
 
 ## Prepare
 
-* Download the ``google_model.bin`` and ``text_ent_encoder.bin`` from [here](https://www.weiyun.com/disk), and save them to the ``models/`` directory.
-* Download the ``CnDbpedia.spo`` from [here](https://www.weiyun.com/disk), and save it to the ``brain/kgs/`` directory.
-* Optional - Download the datasets for evaluation from [here](https://www.weiyun.com/disk), unzip and place them in the ``datasets/`` directory.
+* Download the ``google_model.bin`` and ``text_ent_encoder.bin`` from [here](https://drive.google.com/drive/folders/1mLl6HrxtuXOffnKrHQK4Q40tMgspMyCP?usp=sharing), and save them to the ``models/`` directory.
+* Download the ``CnDbpedia.spo`` from [here](https://drive.google.com/drive/folders/1mLl6HrxtuXOffnKrHQK4Q40tMgspMyCP?usp=sharing), and save it to the ``brain/kgs/`` directory.
+* Optional - Download the datasets for evaluation from [here](https://drive.google.com/drive/folders/1mLl6HrxtuXOffnKrHQK4Q40tMgspMyCP?usp=sharing), unzip and place them in the ``datasets/`` directory.
 
 The directory tree of BMOC-KEPLM:
 ```
