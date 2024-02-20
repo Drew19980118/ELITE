@@ -31,8 +31,7 @@ BMOC-KEPLM
 │   ├── __init__.py
 │   ├── kgs
 │   │   ├── CnDbpedia.spo
-│   │   ├── HowNet.spo
-│   │   └── Medical.spo
+│   │   └── HowNet.spo
 │   └── knowgraph.py
 ├── datasets
 │   ├── book_review
