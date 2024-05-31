@@ -1,6 +1,6 @@
-# BMOC-KEPLM
+# EKIPTC
 
-Sorce code and datasets for ["BMOC-KEPLM: Bias Mitigation and Optimized Classification in Knowledge-Enhanced Pre-trained Language Models"], which is implemented based on the [UER](https://github.com/dbiir/UER-py) framework.
+Sorce code and datasets for ["EKIPTC: Effective Knowledge Integration in Pre-trained language models for Text Classification"], which is implemented based on the [UER](https://github.com/dbiir/UER-py) framework.
 
 **News**
 
@@ -59,7 +59,7 @@ BMOC-KEPLM
 ```
 
 
-## BMOC-KEPLM for text classification
+## EKIPTC for text classification
 
 ### Classification example
 
