@@ -65,7 +65,7 @@ BMOC-KEPLM
 
 Run example on different datasets (for example, on Book review dataset) with CnDbpedia:
 ```sh
-CUDA_VISIBLE_DEVICES='0' nohup python3 -u run_bmoc_keplm_cls.py \
+CUDA_VISIBLE_DEVICES='0' nohup python3 -u run_ekiptc_cls.py \
     --pretrained_model_path ./models/google_model.bin \
     --relevance_model_path ./models/text_ent_encoder.bin \
     --config_path ./models/google_config.json \
