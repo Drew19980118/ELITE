@@ -55,7 +55,7 @@ BMOC-KEPLM
 ├── uer
 ├── README.md
 ├── requirements.txt
-└── run_bmoc_keplm_cls.py
+└── run_ekiptc_cls.py
 ```
 
 
