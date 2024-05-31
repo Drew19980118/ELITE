@@ -2,11 +2,6 @@
 
 Sorce code and datasets for ["EKIPTC: Effective Knowledge Integration in Pre-trained language models for Text Classification"], which is implemented based on the [UER](https://github.com/dbiir/UER-py) framework.
 
-**News**
-
-- [EasyNLP](https://github.com/alibaba/EasyNLP) integrated the K-BERT. For details, see [EasyNLP集成K-BERT算法，借助知识图谱实现更优Finetune](https://zhuanlan.zhihu.com/p/553816104).
-
-
 ## Requirements
 
 Software:
