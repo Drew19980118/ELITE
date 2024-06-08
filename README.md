@@ -1,6 +1,6 @@
-# EKIPTC
+# ELITE
 
-Sorce code and datasets for ["EKIPTC: Effective Knowledge Integration in Pre-trained language models for Text Classification"], which is implemented based on the [UER](https://github.com/dbiir/UER-py) framework.
+Sorce code and datasets for ["ELITE: Effective Knowledge Integration in Pre-trained language models for Text Classification"], which is implemented based on the [UER](https://github.com/dbiir/UER-py) framework.
 
 ## Requirements
 
@@ -18,7 +18,7 @@ argparse == 1.1
 * Download the ``CnDbpedia.spo`` from [here](https://drive.google.com/drive/folders/1mLl6HrxtuXOffnKrHQK4Q40tMgspMyCP?usp=sharing), and save it to the ``brain/kgs/`` directory.
 * Optional - Download the datasets for evaluation from [here](https://drive.google.com/drive/folders/1mLl6HrxtuXOffnKrHQK4Q40tMgspMyCP?usp=sharing), unzip and place them in the ``datasets/`` directory.
 
-The directory tree of BMOC-KEPLM:
+The directory tree of ELITE:
 ```
 BMOC-KEPLM
 ├── brain
@@ -54,7 +54,7 @@ BMOC-KEPLM
 ```
 
 
-## EKIPTC for text classification
+## ELITE for text classification
 
 ### Classification example
 
