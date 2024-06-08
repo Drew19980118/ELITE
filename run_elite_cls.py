@@ -1,7 +1,4 @@
 # -*- encoding:utf-8 -*-
-"""
-  This script provides a k-BERT exmaple for classification.
-"""
 import sys
 import torch
 import json
