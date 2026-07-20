@@ -1,6 +1,6 @@
 # ELITE
 
-Source code and datasets for ["ELITE: Effective Knowledge Integration in Pre-trained Language Models for Text Classification"], which is implemented based on the [UER](https://github.com/dbiir/UER-py) framework.
+Source code and datasets for paper **"ELITE: Effective Knowledge Integration in Pre-trained Language Models for Text Classification"**, which is implemented based on the [UER](https://github.com/dbiir/UER-py) framework.
 
 ## Requirements
 
