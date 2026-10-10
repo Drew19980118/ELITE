@@ -74,3 +74,19 @@ python3 -u run_ekiptc_cls.py \
 ```
 
 
+## 📝 Citation
+
+If you find this repository useful, please cite the corresponding paper.
+
+```bibtex
+@article{zhang2025elite,
+  title={ELITE: a novel approach of knowledge integration in pre-trained language models for text classification: W. Zhang and R. Chiong},
+  author={Zhang, Weidong and Chiong, Raymond},
+  journal={Applied Intelligence},
+  volume={55},
+  number={16},
+  pages={1088},
+  year={2025},
+  publisher={Springer}
+}
+```
